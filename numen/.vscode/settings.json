@@ -1,0 +1,7 @@
+{
+  "C_Cpp.codeAnalysis.clangTidy.checks.disabled": [
+    "clang-diagnostic-error",
+    "clang-diagnostic-error",
+    "clang-diagnostic-error"
+  ]
+}
