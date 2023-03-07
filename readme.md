@@ -304,12 +304,12 @@ free_exit:
 #### bug
 写驱动的作者应该是个新手,这个驱动充满了bug:
 比如在IO控制回调:
-![](imges/1.png)
+![](https://github.com/huoji120/numen/blob/master/imges/1.png)
 这会直接导致一个UAF
 另外作者可能不知道unicode_string可能不为0
-![](imges/2.png)
+![](https://github.com/huoji120/numen/blob/master/imges/2.png)
 unicode的字符串不一定是0结尾 结果这个作者用try保证读到0的时候不会爆炸...
-![](imges/3.png)
+![](https://github.com/huoji120/numen/blob/master/imges/3.png)
 
 ### 死而复生
 这个rootkit最早是2017年的,理论上已经死了很久了.
@@ -323,11 +323,11 @@ https://github.com/repnz/autochk-rootkit
 其原理是定位fltpcreate特征码,然后判断是否被挂钩,一旦被挂钩,此项目就会还原挂钩,让他的文件隐藏失效
 ### 测试
 这是rootkit原本的样子:
-![](imges/4.png)
+![](https://github.com/huoji120/numen/blob/master/imges/4.png)
 加载了rootkit,可以看到文件被修改成了系统文件,这个时候杀毒软件是杀不出来的(因为会被重定向到系统文件):
-![](imges/5.png)
+![](https://github.com/huoji120/numen/blob/master/imges/5.png)
 加载项目后,还原钩子,问题解决,此时再杀毒,应该能杀出来了
-![](imges/6.png)
+![](https://github.com/huoji120/numen/blob/master/imges/6.png)
 项目支持系统列表
 
 > windows 7
